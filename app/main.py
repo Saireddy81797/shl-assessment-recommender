@@ -1,23 +1,11 @@
-from pydantic import BaseModel
-from typing import List
+from fastapi import FastAPI
+from app.routes.chat import router as chat_router
+
+app = FastAPI(title="SHL Assessment Recommender")
+
+app.include_router(chat_router)
 
 
-class Message(BaseModel):
-    role: str
-    content: str
-
-
-class ChatRequest(BaseModel):
-    messages: List[Message]
-
-
-class Recommendation(BaseModel):
-    name: str
-    url: str
-    test_type: str
-
-
-class ChatResponse(BaseModel):
-    reply: str
-    recommendations: List[Recommendation]
-    end_of_conversation: bool
+@app.get("/health")
+def health():
+    return {"status": "ok"}
