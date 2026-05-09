@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Java 8 (New)",
+    "description": "Java programming assessment for developers.",
+    "url": "https://www.shl.com",
+    "test_type": "K"
+  },
+  {
+    "name": "OPQ32r",
+    "description": "Occupational personality assessment.",
+    "url": "https://www.shl.com",
+    "test_type": "P"
+  }
+]
